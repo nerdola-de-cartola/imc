@@ -1,10 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Descubra seu IMC</title>
+    <script>
+
+        let weight = Number(prompt(`Qual seu peso ?`))
+        let height = Number.parseFloat(prompt(`Qual sua altura ?`))
+
+        let imc = calculateIMC(weight, height)
+        let message = defineMessage(imc)
+        showResults(message)
+
+        function calculateIMC(peso, altura) {   
+            let imc = peso / (altura ** 2)
+            return imc
+        }
+
+        function showResults(results) {
+            document.write(results)
+        }
+
+        function defineMessage(imc) {
+            if (imc < 18) {
+                return `Seu IMC é de ${imc} portanto está abaixo do recomendado`
+            }
+
+            if (imc > 35) {
+                return `Seu IMC é de ${imc} portanto está acima do recomendado`
+            }
+
+            if (imc >= 18 && imc <= 35) {
+                return `Seu IMC é de ${imc} portanto ele está muito bom`
+            }
+        }
+    </script>
 </head>
 <body>
     <h1>Descubra seu IMC</h1>
