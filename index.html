@@ -5,25 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Descubra seu IMC</title>
-    
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        main{
+            margin: auto 175px;
+            background-color: lightcoral;
+            border-color: black;
+            border-radius: 30px;
+            text-align: center;
+        }
+
+        input[type="button"] {
+            margin: 20px;
+            width: 150px;
+            height: 40px;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>Descubra seu IMC</h1>
+    <main>
+        <h1>Descubra seu IMC</h1>
 
-    <div>
+        <div id="div_input">
 
-    <p>Peso <input type="number" id="weight_input"></p>
-    <p>Altura <input type="number" id="heigth_input"></p>
+        <p>Peso <input type="number" id="weight_input"></p>
+        <p>Altura <input type="number" id="heigth_input"></p>
 
-    <input type="button" value="Calcular" id="calculate_button">
+        <input type="button" value="Calcular" id="calculate_button">
 
-    </div>
+        </div>
+    </main>
     <script>
 
-        //let weight = Number(prompt(`Qual seu peso ?`))
-        //let height = Number.parseFloat(prompt(`Qual sua altura ?`))
+        let weight = Number(prompt(`Qual seu peso ?`))
+        let height = Number.parseFloat(prompt(`Qual sua altura ?`))
 
         let imc = calculateIMC(weight, height)
         let message = defineMessage(imc)
