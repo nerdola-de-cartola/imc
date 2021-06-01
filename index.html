@@ -12,10 +12,18 @@
 
     <h1>Descubra seu IMC</h1>
 
+    <div>
+
+    <p>Peso <input type="number" id="weight_input"></p>
+    <p>Altura <input type="number" id="heigth_input"></p>
+
+    <input type="button" value="Calcular" id="calculate_button">
+
+    </div>
     <script>
 
-        let weight = Number(prompt(`Qual seu peso ?`))
-        let height = Number.parseFloat(prompt(`Qual sua altura ?`))
+        //let weight = Number(prompt(`Qual seu peso ?`))
+        //let height = Number.parseFloat(prompt(`Qual sua altura ?`))
 
         let imc = calculateIMC(weight, height)
         let message = defineMessage(imc)
