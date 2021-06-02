@@ -40,12 +40,11 @@
         <div id="div_input">
 
         <p>Peso: <input type="number" id="weight_input"></p>
-        <p>Altura: <input type="number" id="heigth_input"></p>
+        <p>Altura: <input type="number" id="height_input"></p>
 
         <input type="button" value="Calcular" id="calculate_button">
 
-    <p>Peso <input type="number" id="weight_input"></p>
-    <p>Altura <input type="number" id="height_input"></p>
+
 
         <div id="div_results">
 
@@ -63,8 +62,6 @@
             let message = defineMessage(imc)
             showResults(message)
         }
-
-
 
         function calculateIMC(peso, altura) {   
             let imc = peso / (altura ** 2)
