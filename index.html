@@ -12,6 +12,7 @@
 
         main{
             margin: auto 175px;
+            padding: 5px 0px;
             background-color: lightcoral;
             border-color: black;
             border-radius: 30px;
@@ -24,6 +25,10 @@
             height: 40px;
             border-radius: 10px;
         }
+
+        input#weight_input{
+            margin-left: 4px;
+        }
     </style>
 </head>
 
@@ -34,17 +39,21 @@
 
         <div id="div_input">
 
-        <p>Peso <input type="number" id="weight_input"></p>
-        <p>Altura <input type="number" id="heigth_input"></p>
+        <p>Peso: <input type="number" id="weight_input"></p>
+        <p>Altura: <input type="number" id="heigth_input"></p>
 
         <input type="button" value="Calcular" id="calculate_button">
+
+        </div>
+
+        <div id="div_results">
 
         </div>
     </main>
     <script>
 
-        let weight = Number(prompt(`Qual seu peso ?`))
-        let height = Number.parseFloat(prompt(`Qual sua altura ?`))
+        //let weight = Number(prompt(`Qual seu peso ?`))
+        //let height = Number.parseFloat(prompt(`Qual sua altura ?`))
 
         let imc = calculateIMC(weight, height)
         let message = defineMessage(imc)
@@ -56,7 +65,9 @@
         }
 
         function showResults(results) {
-            document.write(results)
+            let results_div = document.getElementById('div_results')
+            results_div.innerHTML = `<h2>Resultado</h2>`
+            results_div.innerHTML += `<p>${results}</p>`
         }
 
         function defineMessage(imc) {
