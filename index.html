@@ -15,19 +15,25 @@
     <div>
 
     <p>Peso <input type="number" id="weight_input"></p>
-    <p>Altura <input type="number" id="heigth_input"></p>
+    <p>Altura <input type="number" id="height_input"></p>
 
     <input type="button" value="Calcular" id="calculate_button">
 
     </div>
     <script>
 
-        //let weight = Number(prompt(`Qual seu peso ?`))
-        //let height = Number.parseFloat(prompt(`Qual sua altura ?`))
+        let calculate_button = document.getElementById('calculate_button')
+        calculate_button.addEventListener('click', click)
 
-        let imc = calculateIMC(weight, height)
-        let message = defineMessage(imc)
-        showResults(message)
+        function click() {
+            let weight = Number(document.getElementById('weight_input').value)
+            let height = Number.parseFloat(document.getElementById('height_input').value)
+            let imc = calculateIMC(weight, height)
+            let message = defineMessage(imc)
+            showResults(message)
+        }
+
+
 
         function calculateIMC(peso, altura) {   
             let imc = peso / (altura ** 2)
