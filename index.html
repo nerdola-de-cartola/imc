@@ -132,16 +132,32 @@
         }
 
         function defineMessage(imc) {
-            if (imc < 18) {
-                return `Seu IMC é de ${imc} portanto está abaixo do recomendado`
+            if (imc < 18.5) {
+                return `Seu IMC é de ${imc} <br> Por isso você pode ser considerado abaixo do peso.`
             }
 
-            if (imc > 35) {
-                return `Seu IMC é de ${imc} portanto está acima do recomendado`
+            if (imc >= 18.5 && imc < 25) {
+                return `Seu IMC é de ${imc} <br> Portanto você está próximo do peso ideal.`
             }
 
-            if (imc >= 18 && imc <= 35) {
-                return `Seu IMC é de ${imc} portanto ele está muito bom`
+            if (imc >= 25 && imc < 30) {
+                return `Seu IMC é de ${imc} <br> Por isso você pode ser considerado uma pessoa com sobrepeso.`
+            }
+
+            if (imc >= 30 && imc < 35) {
+                return `Seu IMC é de ${imc} <br> Por isso você pode ser considerado uma pessoa com obesidade grau 1.`
+            }
+
+            if (imc >= 35 && imc < 40) {
+                return `Seu IMC é de ${imc} <br> Por isso você pode ser considerado uma pessoa com obesidade grau 2.`
+            }
+
+            if (imc >= 40) {
+                return `Seu IMC é de ${imc} <br> Por isso você pode ser considerado uma pessoa com obesidade grau 3.`
+            }
+
+            else {
+                return `Insira as informações`
             }
         }
     </script>
