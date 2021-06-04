@@ -7,16 +7,23 @@
     <title>Descubra seu IMC</title>
     <style>
         body {
+            margin: 0px;
             font-family: Arial, Helvetica, sans-serif;
+            background-color: whitesmoke;
         }
 
         main{
-            margin: auto 175px;
+            margin: 12px 175px;
             padding: 5px 0px;
             background-color: lightcoral;
             border-color: black;
             border-radius: 30px;
             text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(61, 61, 61, 0.726)
         }
 
         input[type="button"] {
@@ -29,6 +36,49 @@
         input#weight_input{
             margin-left: 4px;
         }
+
+        footer {
+            position: absolute;
+            bottom: 0px;
+            padding: 4px;
+            padding-left: 25%;
+            width: 100%;
+            background-color: lightcoral;
+
+        }
+
+        dl#credits{
+            margin: 4px;
+            display: flex;
+            margin: auto;
+            
+        }
+
+        dt {
+            margin: 0px 100px;
+            margin-right: 100px;
+            text-decoration: underline;
+            color: rgba(61, 61, 61, 0.726)
+        }
+
+        dd {
+            font-size: 22px;
+            margin: 4px;
+            margin-top: 30px;
+        }
+
+        dd#dev {
+            margin-left: -220px;
+        }
+
+        dd#creator {
+            margin-left: -200px;
+        }
+
+        dd#owner {
+            margin-left: -180px;
+        }
+
     </style>
 </head>
 
@@ -51,11 +101,11 @@
         </div>
     </main>
     <footer>
-        <ul>
-            <li>Desenvolvedor: <a href="https://twitter.com/MatheusLMP5772">Matheus Lucas</a></li>
-            <li>Ideia original: <a href="https://github.com/camilalves13/imc">Camila Alves</a></li>
-            <li>Dono: <a href="https://twitter.com/magonlice">Alice Macêdo</a> </li>
-        </ul>
+        <dl id="credits">
+            <dt>Desenvolvedor</dt> <dd id="dev"><a href="https://twitter.com/MatheusLMP5772">Matheus Lucas</a></dd>
+            <dt>Ideia original</dt> <dd id="creator"><a href="https://github.com/camilalves13/imc">Camila Alves</a></dd>
+            <dt>Dono</dt> <dd id="owner"><a href="https://twitter.com/magonlice">Alice Macêdo</a></dd> 
+        </dl>
     </footer>
     <script>
 
