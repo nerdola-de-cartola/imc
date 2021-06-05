@@ -4,8 +4,12 @@ function click() {
     let weight = Number(document.getElementById('weight_input').value)
     let height = Number.parseFloat(document.getElementById('height_input').value)
     let imc = calculateIMC(weight, height)
-    let message = defineMessage(imc)
-    showResults(message)
+    if (validationData(imc)) {
+        showResults(defineMessage(imc))
+    } else {
+        showResults('Insira os dados corretamente')
+    }
+
 }
 
 function calculateIMC(peso, altura) {   
@@ -43,8 +47,31 @@ function defineMessage(imc) {
     if (imc >= 40) {
         return `Seu IMC é de ${imc} <br> Por isso você pode ser considerado uma pessoa com obesidade grau 3.`
     }
+}
+
+function validationData(imc) {
+    if (imc <=0) {
+        return false
+    }
+
+    if (imc == undefined) {
+        return false
+    }
+
+    if (isNaN(imc)) {
+        return false
+    }
+
+    if (imc == null) {
+        return false
+    }
+
+    if (imc >= Infinity) {
+        return false
+    }
 
     else {
-        return `Insira as informações`
+        return true
     }
+    
 }
