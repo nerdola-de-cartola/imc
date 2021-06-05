@@ -47,9 +47,9 @@ label {
 footer {
     position: absolute;
     bottom: 0px;
-    padding: 4px;
+    padding: 8px 4px;
     padding-left: 25%;
-    width: 100%;
+    width: 74.7vw;
     background-color: lightcoral;
 
 }
