@@ -5,81 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Descubra seu IMC</title>
-    <style>
-        body {
-            margin: 0px;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: whitesmoke;
-        }
-
-        main{
-            margin: 12px 175px;
-            padding: 5px 0px;
-            background-color: lightcoral;
-            border-color: black;
-            border-radius: 30px;
-            text-align: center;
-        }
-
-        a {
-            text-decoration: none;
-            color: rgb(61, 61, 61, 0.726)
-        }
-
-        input[type="button"] {
-            margin: 20px;
-            width: 150px;
-            height: 40px;
-            border-radius: 10px;
-        }
-
-        input#weight_input{
-            margin-left: 4px;
-        }
-
-        footer {
-            position: absolute;
-            bottom: 0px;
-            padding: 4px;
-            padding-left: 25%;
-            width: 100%;
-            background-color: lightcoral;
-
-        }
-
-        dl#credits{
-            margin: 4px;
-            display: flex;
-            margin: auto;
-            
-        }
-
-        dt {
-            margin: 0px 100px;
-            margin-right: 100px;
-            text-decoration: underline;
-            color: rgba(61, 61, 61, 0.726)
-        }
-
-        dd {
-            font-size: 22px;
-            margin: 4px;
-            margin-top: 30px;
-        }
-
-        dd#dev {
-            margin-left: -228px;
-        }
-
-        dd#creator {
-            margin-left: -208px;
-        }
-
-        dd#owner {
-            margin-left: -180px;
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -100,6 +26,7 @@
 
         </div>
     </main>
+
     <footer>
         <dl id="credits">
             <dt>Desenvolvedor</dt> <dd id="dev"><a href="https://twitter.com/MatheusLMP5772">Matheus Lucas</a></dd>
@@ -107,60 +34,7 @@
             <dt>Dono</dt> <dd id="owner"><a href="https://twitter.com/magonlice">Alice Macêdo</a></dd> 
         </dl>
     </footer>
-    <script>
 
-        let calculate_button = document.getElementById('calculate_button')
-        calculate_button.addEventListener('click', click)
-
-        function click() {
-            let weight = Number(document.getElementById('weight_input').value)
-            let height = Number.parseFloat(document.getElementById('height_input').value)
-            let imc = calculateIMC(weight, height)
-            let message = defineMessage(imc)
-            showResults(message)
-        }
-
-        function calculateIMC(peso, altura) {   
-            let imc = peso / (altura ** 2)
-            return imc
-        }
-
-        function showResults(results) {
-            let results_div = document.getElementById('div_results')
-            results_div.innerHTML = `<h2>Resultado</h2>`
-            results_div.innerHTML += `<p>${results}</p>`
-        }
-
-        function defineMessage(imc) {
-            if (imc < 18.5) {
-                return `Seu IMC é de ${imc} <br> Por isso você pode ser considerado abaixo do peso.`
-            }
-
-            if (imc >= 18.5 && imc < 25) {
-                return `Seu IMC é de ${imc} <br> Portanto você está próximo do peso ideal.`
-            }
-
-            if (imc >= 25 && imc < 30) {
-                return `Seu IMC é de ${imc} <br> Por isso você pode ser considerado uma pessoa com sobrepeso.`
-            }
-
-            if (imc >= 30 && imc < 35) {
-                return `Seu IMC é de ${imc} <br> Por isso você pode ser considerado uma pessoa com obesidade grau 1.`
-            }
-
-            if (imc >= 35 && imc < 40) {
-                return `Seu IMC é de ${imc} <br> Por isso você pode ser considerado uma pessoa com obesidade grau 2.`
-            }
-
-            if (imc >= 40) {
-                return `Seu IMC é de ${imc} <br> Por isso você pode ser considerado uma pessoa com obesidade grau 3.`
-            }
-
-            else {
-                return `Insira as informações`
-            }
-        }
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
