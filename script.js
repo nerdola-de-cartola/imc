@@ -11,7 +11,7 @@ function click() {
 
 function calculateIMC(peso, altura) {   
     let imc = peso / (altura ** 2)
-    return imc
+    return imc.toFixed(2)
 }
 
 function showResults(results) {
