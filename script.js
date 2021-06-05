@@ -1,5 +1,4 @@
-let calculate_button = document.getElementById('calculate_button')
-calculate_button.addEventListener('click', click)
+document.getElementById('calculate_button').addEventListener('click', click)
 
 function click() {
     let weight = Number(document.getElementById('weight_input').value)
