@@ -24,8 +24,24 @@ function showResults(results) {
 }
 
 function defineMessage(imc) {
-    if (imc < 18.5) {
-        return `Seu IMC é de ${imc} <br> Por isso você pode ser considerado abaixo do peso.`
+    if (imc < 10) {
+        return `Seu IMC é de ${imc} <br> Por isso você pode ser considerado uma pessoa com desnutrição grau 5.`
+    }
+
+    if (imc >= 10 && imc < 13) {
+        return `Seu IMC é de ${imc} <br> Por isso você pode ser considerado uma pessoa com desnutrição grau 4.`
+    }
+
+    if (imc >= 13 && imc < 16) {
+        return `Seu IMC é de ${imc} <br> Por isso você pode ser considerado uma pessoa com desnutrição grau 3.`
+    }
+
+    if (imc >= 16 && imc < 17) {
+        return `Seu IMC é de ${imc} <br> Por isso você pode ser considerado uma pessoa com desnutrição grau 2.`
+    }
+
+    if (imc >= 17 && imc < 18.5) {
+        return `Seu IMC é de ${imc} <br> Por isso você pode ser considerado uma pessoa com desnutrição grau 1.`
     }
 
     if (imc >= 18.5 && imc < 25) {
