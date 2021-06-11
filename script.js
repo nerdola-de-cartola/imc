@@ -6,8 +6,8 @@ function click() {
     let imc = calculateIMC(weight, height)
     if (validationData(imc)) {
         let bio_type = defineBioType(imc)
-        let message = defineMessage(bio_type)
-        showResults(message) 
+        let result = defineMessage(bio_type)
+        showResults(result) 
     } else {
         showResults('Insira os dados corretamente')
     }
@@ -125,43 +125,61 @@ function defineBioType(imc) {
 function defineMessage(n) {
     switch (n) {
         case 0:
-            
+            let message0 = new Message(`a`, `b`)
+            return message0
+
             break;
         case 1:
-            let message = new Message(`a`, `b`)
-            return message
+            let message1 = new Message(`a`, `b`)
+            return message1
 
             break;
         case 2:
+            let message2 = new Message(`a`, `b`)
+            return message2
 
             break;
 
         case 3:
-
+            let message3 = new Message(`a`, `b`)
+            return message3
+            
             break;
 
         case 4:
-
+            let message4 = new Message(`a`, `b`)
+            return message4
+            
             break;
 
         case 5:
-
+            let message5 = new Message(`a`, `b`)
+            return message5
+            
             break;
 
         case 6:
-
+            let message6 = new Message(`a`, `b`)
+            return message6
+            
             break;
 
         case 7:
-
+            let message7 = new Message(`a`, `b`)
+            return message7
+            
             break;
 
         case 8:
-
+            let message8 = new Message(`a`, `b`)
+            return message8
+            
             break;
 
         case 9:
-
+            let message9 = new Message(`a`, `b`)
+            return message9
+            
             break;
     
         default:
