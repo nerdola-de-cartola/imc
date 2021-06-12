@@ -22,8 +22,7 @@ function calculateIMC(peso, altura) {
 function showResults(message, imc) {
     let results_div = document.getElementById('div_results')
     results_div.innerHTML = `<h2>Resultado</h2>`
-    results_div.innerHTML +=`<p>Seu IMC é de ${imc}</p>`
-    results_div.innerHTML +=`<p>${message.warning}</p>`
+    results_div.innerHTML +=`<p>Seu IMC é de ${imc} <br> ${message.warning}</p>`
     results_div.innerHTML +=`<p>${message.text}</p>`
     
     
