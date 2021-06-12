@@ -6,11 +6,15 @@ body {
 
 main{
     margin: 12px 175px;
-    padding: 5px 0px;
+    padding: 0px 5px 30px 5px;
     background-color: lightcoral;
     border-color: black;
     border-radius: 30px;
     text-align: center;
+}
+
+div#all {
+    position: relative;
 }
 
 a {
@@ -45,11 +49,13 @@ label {
 }
 
 footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    bottom: 0px;
     padding: 8px 4px;
-    padding-left: 25%;
-    width: 74.7vw;
+    width: 100vw;
+    bottom: 0px;
     background-color: lightcoral;
 
 }
@@ -63,7 +69,6 @@ dl#credits{
 
 dt {
     margin: 0px 100px;
-    margin-right: 100px;
     text-decoration: underline;
     color: rgba(61, 61, 61, 0.726)
 }
