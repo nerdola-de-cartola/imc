@@ -74,50 +74,50 @@ function defineBioType(imc) {
 function defineMessage(n) {
     switch (n) {
         case 0:
-            let message2 = new Message(`Por isso você pode ser considerado uma pessoa com desnutrição grave.`, `b`)
-            return message2
+            let message0 = new Message(`Por isso você pode ser considerado uma pessoa com desnutrição grave.`, `b`)
+            return message0
 
             break;
 
         case 1:
-            let message3 = new Message(`Por isso você pode ser considerado uma pessoa com desnutrição moderada.`, `b`)
-            return message3
+            let message1 = new Message(`Por isso você pode ser considerado uma pessoa com desnutrição moderada.`, `b`)
+            return message1
             
             break;
 
         case 2:
-            let message4 = new Message(`Por isso você pode ser considerado uma pessoa com desnutrição leve.`, `b`)
-            return message4
+            let message2 = new Message(`Por isso você pode ser considerado uma pessoa com desnutrição leve.`, `b`)
+            return message2
             
             break;
 
         case 3:
-            let message5 = new Message(`Portanto você está próximo do peso ideal.`, `b`)
-            return message5
+            let message3 = new Message(`Portanto você está próximo do peso ideal.`, `b`)
+            return message3
             
             break;
 
         case 4:
-            let message6 = new Message(`Por isso você pode ser considerado uma pessoa com sobrepeso.`, `b`)
-            return message6
+            let message4 = new Message(`Por isso você pode ser considerado uma pessoa com sobrepeso.`, `b`)
+            return message4
             
             break;
 
         case 5:
-            let message7 = new Message(`Por isso você pode ser considerado uma pessoa com obesidade grau 1`, `b`)
-            return message7
+            let message5 = new Message(`Por isso você pode ser considerado uma pessoa com obesidade grau 1`, `b`)
+            return message5
             
             break;
 
         case 6:
-            let message8 = new Message(`Por isso você pode ser considerado uma pessoa com obesidade grau 2`, `b`)
-            return message8
+            let message6 = new Message(`Por isso você pode ser considerado uma pessoa com obesidade grau 2`, `b`)
+            return message6
             
             break;
 
         case 7:
-            let message9 = new Message(`Por isso você pode ser considerado uma pessoa com obesidade grau 3`, `b`)
-            return message9
+            let message7 = new Message(`Por isso você pode ser considerado uma pessoa com obesidade grau 3`, `b`)
+            return message7
             
             break;
     
@@ -151,4 +151,9 @@ function validationData(imc) {
         return true
     }
     
+}
+
+function Message(warning, text) {
+    this.warning = warning;
+    this.text = text;
 }
