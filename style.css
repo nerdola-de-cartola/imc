@@ -1,3 +1,7 @@
+html, body {
+    height: 100%;
+}
+
 body {
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
@@ -5,16 +9,37 @@ body {
 }
 
 main{
-    margin: 12px 175px;
-    padding: 0px 5px 30px 5px;
-    background-color: lightcoral;
-    border-color: black;
-    border-radius: 30px;
+    margin: 15px 175px;
+    padding-bottom: 6%;
     text-align: center;
+}
+
+footer {
+    display: flex;
+    position: absolute;
+    padding: 4px 0px;
+    width: 100%;
+    bottom: 0px;
+    background-color: rgba(240, 128, 128, 0.938);
+
 }
 
 div#all {
     position: relative;
+}
+
+div#div_input {
+    margin-bottom: 15px;
+    background-color: lightcoral;
+    border-color: black;
+    border-radius: 30px;
+}
+
+div#div_results {
+    margin-bottom: 15px;
+    background-color: lightcoral;
+    border-color: black;
+    border-radius: 30px;
 }
 
 a {
@@ -46,18 +71,6 @@ label {
 ::placeholder {
     text-align: end;
     color: rgba(88, 88, 88, 0.788);
-}
-
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    padding: 8px 4px;
-    width: 100vw;
-    bottom: 0px;
-    background-color: lightcoral;
-
 }
 
 dl#credits{
