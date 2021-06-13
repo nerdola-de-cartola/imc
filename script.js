@@ -9,7 +9,7 @@ function click() {
         let result = defineMessage(bio_type)
         showResults(result, imc) 
     } else {
-        showResults('Insira os dados corretamente')
+        showError()
     }
 
 }
@@ -22,14 +22,20 @@ function calculateIMC(peso, altura) {
 function showResults(message, imc) {
     let results_div = document.getElementById('div_results')
     results_div.innerHTML = `<h2>Resultado</h2>`
-    results_div.innerHTML +=`<p>Seu IMC é de ${imc} <br> ${message.warning}</p>`
+    results_div.innerHTML +=`<h4>Seu IMC é de <u>${imc}</u></h4>`
+    results_div.innerHTML += `<p>${message.warning}</p>`
     results_div.innerHTML +=`<p>${message.text}</p>`
-    
+    results_div.innerHTML +=`</br>`
     
 }
 
-function defineBioType(imc) {
+function showError() {
+    let results_div = document.getElementById('div_results')
+    results_div.innerHTML = `<h2>Erro</h2>`
+    results_div.innerHTML +=`<p>Insira os dados corretamente</p>`
+}
 
+function defineBioType(imc) {
     if (imc < 16) {
         let bio_type = 0
         return bio_type
