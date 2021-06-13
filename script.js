@@ -1,4 +1,5 @@
 document.getElementById('calculate_button').addEventListener('click', click)
+let selected_image = `images/labtocat.png`
 
 function click() {
     let weight = Number(document.getElementById('weight_input').value)
@@ -7,7 +8,7 @@ function click() {
     if (validationData(imc)) {
         let bio_type = defineBioType(imc)
         let result = defineMessage(bio_type)
-        showResults(result, imc) 
+        showResults(result, imc, selected_image) 
     } else {
         showError()
     }
@@ -19,14 +20,19 @@ function calculateIMC(peso, altura) {
     return imc.toFixed(2)
 }
 
-function showResults(message, imc) {
+function showResults(message, imc, image) {
     let results_div = document.getElementById('div_results')
+    let elImage = document.createElement('img')
+    elImage.setAttribute('src', image)
+    elImage.setAttribute('id', 'results_image')
+ 
+
     results_div.innerHTML = `<h2>Resultado</h2>`
     results_div.innerHTML +=`<h4>Seu IMC é de <u>${imc}</u></h4>`
     results_div.innerHTML += `<p>${message.warning}</p>`
     results_div.innerHTML +=`<p>${message.text}</p>`
     results_div.innerHTML +=`</br>`
-    
+    results_div.appendChild(elImage)
 }
 
 function showError() {
