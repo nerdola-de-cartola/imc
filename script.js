@@ -1,5 +1,4 @@
 document.getElementById('calculate_button').addEventListener('click', click)
-let selected_image = `images/labtocat.png`
 
 function click() {
     let weight = Number(document.getElementById('weight_input').value)
@@ -8,7 +7,7 @@ function click() {
     if (validationData(imc)) {
         let bio_type = defineBioType(imc)
         let result = defineMessage(bio_type)
-        showResults(result, imc, selected_image) 
+        showResults(result, imc) 
     } else {
         showError()
     }
@@ -20,10 +19,10 @@ function calculateIMC(peso, altura) {
     return imc.toFixed(2)
 }
 
-function showResults(message, imc, image) {
+function showResults(message, imc) {
     let results_div = document.getElementById('div_results')
     let elImage = document.createElement('img')
-    elImage.setAttribute('src', image)
+    elImage.setAttribute('src', message.image)
     elImage.setAttribute('id', 'results_image')
  
 
@@ -86,49 +85,49 @@ function defineBioType(imc) {
 function defineMessage(n) {
     switch (n) {
         case 0:
-            let message0 = new Message(`Por isso você pode ser considerado uma pessoa com desnutrição grave.`, `b`)
+            let message0 = new Message(`Por isso você pode ser considerado uma pessoa com desnutrição grave.`, `b`, `images/0.jpg`)
             return message0
 
             break;
 
         case 1:
-            let message1 = new Message(`Por isso você pode ser considerado uma pessoa com desnutrição moderada.`, `b`)
+            let message1 = new Message(`Por isso você pode ser considerado uma pessoa com desnutrição moderada.`, `b`, `images/1.jpg`)
             return message1
             
             break;
 
         case 2:
-            let message2 = new Message(`Por isso você pode ser considerado uma pessoa com desnutrição leve.`, `b`)
+            let message2 = new Message(`Por isso você pode ser considerado uma pessoa com desnutrição leve.`, `b`, `images/2.jpg`)
             return message2
             
             break;
 
         case 3:
-            let message3 = new Message(`Portanto você está próximo do peso ideal.`, `b`)
+            let message3 = new Message(`Portanto você está próximo do peso ideal.`, `b`, `images/3.jpg`)
             return message3
             
             break;
 
         case 4:
-            let message4 = new Message(`Por isso você pode ser considerado uma pessoa com sobrepeso.`, `b`)
+            let message4 = new Message(`Por isso você pode ser considerado uma pessoa com sobrepeso.`, `b`, `images/4.jpg`)
             return message4
             
             break;
 
         case 5:
-            let message5 = new Message(`Por isso você pode ser considerado uma pessoa com obesidade grau 1`, `b`)
+            let message5 = new Message(`Por isso você pode ser considerado uma pessoa com obesidade grau 1`, `b`, `images/5.jpg`)
             return message5
             
             break;
 
         case 6:
-            let message6 = new Message(`Por isso você pode ser considerado uma pessoa com obesidade grau 2`, `b`)
+            let message6 = new Message(`Por isso você pode ser considerado uma pessoa com obesidade grau 2`, `b`, `images/6.jpg`)
             return message6
             
             break;
 
         case 7:
-            let message7 = new Message(`Por isso você pode ser considerado uma pessoa com obesidade grau 3`, `b`)
+            let message7 = new Message(`Por isso você pode ser considerado uma pessoa com obesidade grau 3`, `b`, `images/7.jpg`)
             return message7
             
             break;
@@ -165,7 +164,9 @@ function validationData(imc) {
     
 }
 
-function Message(warning, text) {
+function Message(warning, text, image) {
     this.warning = warning;
     this.text = text;
+    this.image = image
 }
+
