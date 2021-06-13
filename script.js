@@ -152,8 +152,3 @@ function validationData(imc) {
     }
     
 }
-
-function Message(warning, text) {
-    this.warning = warning;
-    this.text = text;
-}
