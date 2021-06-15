@@ -91,7 +91,7 @@ function defineMessage(n) {
             break;
 
         case 1:
-            let message1 = new Message(`Por isso você pode ser considerado uma pessoa com desnutrição moderada.`, `b`, `images/1.jpg`)
+            let message1 = new Message(`Por isso você pode ser considerado uma pessoa com desnutrição moderada.`, `b`, `images/1.png`)
             return message1
             
             break;
