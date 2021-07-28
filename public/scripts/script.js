@@ -1,6 +1,4 @@
-document.getElementById('calculate_button').addEventListener('click', click)
-
-function click() {
+export default function Click() {
     let weight = Number(document.getElementById('weight_input').value)
     let height = Number.parseFloat(document.getElementById('height_input').value)
     let imc = calculateIMC(weight, height)
@@ -11,7 +9,6 @@ function click() {
     } else {
         showError()
     }
-
 }
 
 function calculateIMC(peso, altura) {   
