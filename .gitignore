@@ -1,5 +1,2 @@
-
-*.png
-*.jpg
 node_modules
 .next
