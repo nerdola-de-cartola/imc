@@ -85,7 +85,7 @@ function defineMessage(n) {
             let message0 = new Message(
                     `Por isso você pode ser considerado uma pessoa com desnutrição grave.`,
                     ``,
-                    `../public/images/png/0.png`
+                    `/images/0.png`
                 )
             return message0
 
@@ -95,7 +95,7 @@ function defineMessage(n) {
             let message1 = new Message(
                 `Por isso você pode ser considerado uma pessoa com desnutrição moderada.`,
                 ``,
-                `../public/images/png/1.png`
+                `/images/1.png`
             )
             return message1
             
@@ -105,7 +105,7 @@ function defineMessage(n) {
             let message2 = new Message(
                 `Por isso você pode ser considerado uma pessoa com desnutrição leve.`,
                 ``,
-                `../public/images/png/2.png`
+                `/images/2.png`
             )
             return message2
             
@@ -115,7 +115,7 @@ function defineMessage(n) {
             let message3 = new Message(
                 `Portanto você está próximo do peso ideal.`,
                 ``,
-                `../public/images/png/3.png`
+                `/images/3.png`
             )
             return message3
             
@@ -125,7 +125,7 @@ function defineMessage(n) {
             let message4 = new Message(
                 `Por isso você pode ser considerado uma pessoa com sobrepeso.`,
                 ``,
-                `../public/images/png/4.png`
+                `/images/4.png`
             )
             return message4
             
@@ -135,7 +135,7 @@ function defineMessage(n) {
             let message5 = new Message(
                 `Por isso você pode ser considerado uma pessoa com obesidade grau 1`,
                 ``,
-                `../public/images/png/5.png`
+                `/images/5.png`
             )
             return message5
             
@@ -145,7 +145,7 @@ function defineMessage(n) {
             let message6 = new Message(
                 `Por isso você pode ser considerado uma pessoa com obesidade grau 2`,
                 ``,
-                `../public/images/png/6.png`
+                `/images/6.png`
             )
             return message6
             
@@ -155,7 +155,7 @@ function defineMessage(n) {
             let message7 = new Message(
                 `Por isso você pode ser considerado uma pessoa com obesidade grau 3`,
                 ``,
-                `../public/images/png/7.png`
+                `/images/7.png`
                 )
             return message7
             
